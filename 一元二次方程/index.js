@@ -3,11 +3,22 @@ const args = {
   b: 2,
   c: 3,
 };
-const 二次项系数 = Number(args.a);
-const 一次项系数 = Number(args.b);
-const 常数项系数 = Number(args.c);
+// a b c  分别为二次项系数 一次项系数 和 常数项系数
+const a = Number(args.a);
+const b = Number(args.b);
+const c = Number(args.c);
+function is虚数根(a, b, c) {
+  return b * b - 4 * a * c < 0;
+}
+function to虚数根(a,b,c){
 
-if (b * b - 4 * a * c < 0) {
+}
+function to实数根(a,b,c){
+  
+}
+
+if (is虚数根(a, b, c)) {
+  // 使用公式法求解
   var x1 =
     (-b / 2) * a + "-" + (Math.pow(4 * a * c - b * b, 1 / 2) / 2) * a + "i";
   var x2 =
