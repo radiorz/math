@@ -5,8 +5,12 @@
  * @param {number} c 常数项系数
  */
 function to根(a, b, c) {
-  const { x1, x2 } = is虚数根(a, b, c) ? to虚数根(a, b, c) : to实数根(a, b, c);
-  console.log("方程的根分别为：" + "x1=" + x1 + "      " + "x2=" + x2);
+  const _is虚数跟 = is虚数根(a, b, c);
+  const { x1, x2 } = _is虚数跟 ? to虚数根(a, b, c) : to实数根(a, b, c);
+  console.log(
+    "方程的根分别为：" + "x1=" + x1 + "      " + "x2=" + x2,
+    "是虚数跟:" + _is虚数跟
+  );
 }
 
 function is虚数根(a, b, c) {
@@ -28,8 +32,8 @@ function to实数根(a, b, c) {
 
 const args = {
   a: 1,
-  b: 2,
-  c: 3,
+  b: -2,
+  c: 1,
 };
 
 to根(...Object.values(args));
